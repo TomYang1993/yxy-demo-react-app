@@ -6,7 +6,7 @@ import "./LoaderButton.css";
 
 export default function LoaderButton({
   isLoading,
-  className = "",
+  className,
   disabled = false,
   ...props
 }) {
