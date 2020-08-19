@@ -54,72 +54,72 @@ export default function Notes() {
 
     function saveNote(note) {
         return API.put("notes", `/notes/${id}`, {
-          body: note
+            body: note
         });
-      }
-      
-      async function handleSubmit(event) {
+    }
+
+    async function handleSubmit(event) {
         let attachment;
-      
+
         event.preventDefault();
-      
+
         if (file.current && file.current.size > config.MAX_ATTACHMENT_SIZE) {
-          alert(
-            `Please pick a file smaller than ${
-              config.MAX_ATTACHMENT_SIZE / 1000000
-            } MB.`
-          );
-          return;
+            alert(
+                `Please pick a file smaller than ${
+                config.MAX_ATTACHMENT_SIZE / 1000000
+                } MB.`
+            );
+            return;
         }
-      
+
         setIsLoading(true);
-      
+
         try {
 
-            
-          if (file.current) {
-              console.log(note.attachment)
-            await s3Delete(note.attachment);
-            attachment = await s3Upload(file.current);
-          }
-      
-          await saveNote({
-            content,
-            attachment: attachment || note.attachment
-          });
-          history.push("/");
-        } catch (e) {
-          onError(e);
-          setIsLoading(false);
-        }
-      }
 
-      function deleteNote() {
+            if (file.current) {
+                console.log(note.attachment)
+                await s3Delete(note.attachment);
+                attachment = await s3Upload(file.current);
+            }
+
+            await saveNote({
+                content,
+                attachment: attachment || note.attachment
+            });
+            history.push("/");
+        } catch (e) {
+            onError(e);
+            setIsLoading(false);
+        }
+    }
+
+    function deleteNote() {
         return API.del("notes", `/notes/${id}`);
-      }
-      
-      async function handleDelete(event) {
+    }
+
+    async function handleDelete(event) {
         event.preventDefault();
-      
+
         const confirmed = window.confirm(
-          "Are you sure you want to delete this note?"
+            "Are you sure you want to delete this note?"
         );
-      
+
         if (!confirmed) {
-          return;
+            return;
         }
-      
+
         setIsDeleting(true);
-      
+
         try {
-          await deleteNote();
-          await s3Delete(note.attachment);
-          history.push("/");
+            await deleteNote();
+            await s3Delete(note.attachment);
+            history.push("/");
         } catch (e) {
-          onError(e);
-          setIsDeleting(false);
+            onError(e);
+            setIsDeleting(false);
         }
-      }
+    }
 
     return (
         <div className="Notes">
@@ -136,8 +136,8 @@ export default function Notes() {
                     {note.attachment && (
                         <Form.Group>
                             <Form.Label>Attachment</Form.Label>
-                            <Form.Control defaultValue={formatFilename(note.attachment)} plaintext={true} readOnly/>
-                                {/* <a target="_blank" rel="noopener noreferrer" href={note.attachmentURL}>
+                            <Form.Control defaultValue={formatFilename(note.attachment)} plaintext={true} readOnly />
+                            {/* <a target="_blank" rel="noopener noreferrer" href={note.attachmentURL}>
                                     {}
                                 </a> */}
                         </Form.Group>
