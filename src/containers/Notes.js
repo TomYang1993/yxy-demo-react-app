@@ -136,7 +136,7 @@ export default function Notes() {
                     {note.attachment && (
                         <Form.Group>
                             <Form.Label>Attachment</Form.Label>
-                            <Form.Control defaultValue={formatFilename(note.attachment)} plaintext={true} readOnly />
+                            <Form.Control defaultValue={formatFilename(note.attachment)} plaintext readOnly />
                             {/* <a target="_blank" rel="noopener noreferrer" href={note.attachmentURL}>
                                     {}
                                 </a> */}
