@@ -12,6 +12,7 @@ import UnauthenticatedRoute from "./sharedComponents/UnauthenticatedRoute";
 
 export default function Routes() {
     return (
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Switch>
                 <Route exact path="/">
                     <Home />
@@ -37,5 +38,6 @@ export default function Routes() {
                     <NotFound />
                 </Route>
             </Switch>
+        </BrowserRouter>
     );
 }

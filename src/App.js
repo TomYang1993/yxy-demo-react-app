@@ -61,7 +61,7 @@ function App() {
                 <LinkContainer to="/signup">
                   <Nav.Link>Signup</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/login">
+                <LinkContainer to={process.env.PUBLIC_URL +'/login'}>
                   <Nav.Link>Login</Nav.Link>
                 </LinkContainer>
               </>
