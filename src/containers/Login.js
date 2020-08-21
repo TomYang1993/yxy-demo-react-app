@@ -56,7 +56,6 @@ export default function Login() {
                 <LoaderButton
                     block
                     type="submit"
-                    bsSize="large"
                     isLoading={isLoading}
                     disabled={!validateForm()}
                 >

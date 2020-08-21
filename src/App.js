@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, BrowserRouter } from "react-router-dom";
 import { Nav, Navbar, NavItem } from "react-bootstrap";
 import "./App.css";
 import Routes from "./Routes";
@@ -41,10 +41,10 @@ function App() {
   }
 
   return (
-    !isAuthenticating && <div className="App container">
+    !isAuthenticating && <BrowserRouter basename={process.env.PUBLIC_URL}><div className="App container">
       <Navbar collapseOnSelect>
         <Navbar.Brand>
-          <Link to={process.env.PUBLIC_URL + '/'}>Fountain Pen Notes</Link>
+          <Link to={'/'}>Fountain Pen Notes</Link>
         </Navbar.Brand>
         <Navbar.Toggle />
 
@@ -61,7 +61,7 @@ function App() {
                 <LinkContainer to="/signup">
                   <Nav.Link>Signup</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to={process.env.PUBLIC_URL +'/login'}>
+                <LinkContainer to="/login">
                   <Nav.Link>Login</Nav.Link>
                 </LinkContainer>
               </>
@@ -72,8 +72,10 @@ function App() {
       <AppContext.Provider value={{ isAuthenticated, userHasAuthenticated }}>
         <Routes />
       </AppContext.Provider>
+      </div>
+      </BrowserRouter>
 
-    </div>
+    
   );
 }
 

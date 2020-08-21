@@ -12,32 +12,31 @@ import UnauthenticatedRoute from "./sharedComponents/UnauthenticatedRoute";
 
 export default function Routes() {
     return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
-            <Switch>
-                <Route exact path="/">
-                    <Home />
-                </Route>
-                <UnauthenticatedRoute exact path="/login">
-                    <Login />
-                </UnauthenticatedRoute>
-                <UnauthenticatedRoute exact path="/signup">
-                    <Signup />
-                </UnauthenticatedRoute>
-                <AuthenticatedRoute exact path="/settings">
-                    <Settings />
-                </AuthenticatedRoute>
 
-                <AuthenticatedRoute exact path="/notes/new">
-                    <NewNote />
-                </AuthenticatedRoute>
+        <Switch>
+            <Route exact path="/">
+                <Home />
+            </Route>
+            <UnauthenticatedRoute exact path="/login">
+                <Login />
+            </UnauthenticatedRoute>
+            <UnauthenticatedRoute exact path="/signup">
+                <Signup />
+            </UnauthenticatedRoute>
+            <AuthenticatedRoute exact path="/settings">
+                <Settings />
+            </AuthenticatedRoute>
 
-                <AuthenticatedRoute exact path="/notes/:id">
-                    <Notes />
-                </AuthenticatedRoute>
-                <Route>
-                    <NotFound />
-                </Route>
-            </Switch>
-        </BrowserRouter>
+            <AuthenticatedRoute exact path="/notes/new">
+                <NewNote />
+            </AuthenticatedRoute>
+
+            <AuthenticatedRoute exact path="/notes/:id">
+                <Notes />
+            </AuthenticatedRoute>
+            <Route>
+                <NotFound />
+            </Route>
+        </Switch>
     );
 }
