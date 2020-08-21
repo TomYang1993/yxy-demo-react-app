@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
 import Home from "./containers/Home";
 import NotFound from "./containers/NotFound";
 import Login from "./containers/Login";
@@ -12,30 +12,32 @@ import UnauthenticatedRoute from "./sharedComponents/UnauthenticatedRoute";
 
 export default function Routes() {
     return (
-        <Switch>
-            <Route exact path={process.env.PUBLIC_URL + '/'}>
-                <Home />
-            </Route>
-            <UnauthenticatedRoute exact path="/login">
-                <Login />
-            </UnauthenticatedRoute>
-            <UnauthenticatedRoute exact path="/signup">
-                <Signup />
-            </UnauthenticatedRoute>
-            <AuthenticatedRoute exact path="/settings">
-                <Settings />
-            </AuthenticatedRoute>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <Switch>
+                <Route exact path="/">
+                    <Home />
+                </Route>
+                <UnauthenticatedRoute exact path="/login">
+                    <Login />
+                </UnauthenticatedRoute>
+                <UnauthenticatedRoute exact path="/signup">
+                    <Signup />
+                </UnauthenticatedRoute>
+                <AuthenticatedRoute exact path="/settings">
+                    <Settings />
+                </AuthenticatedRoute>
 
-            <AuthenticatedRoute exact path="/notes/new">
-                <NewNote />
-            </AuthenticatedRoute>
+                <AuthenticatedRoute exact path="/notes/new">
+                    <NewNote />
+                </AuthenticatedRoute>
 
-            <AuthenticatedRoute exact path="/notes/:id">
-                <Notes />
-            </AuthenticatedRoute>
-            <Route>
-                <NotFound />
-            </Route>
-        </Switch>
+                <AuthenticatedRoute exact path="/notes/:id">
+                    <Notes />
+                </AuthenticatedRoute>
+                <Route>
+                    <NotFound />
+                </Route>
+            </Switch>
+        </BrowserRouter>
     );
 }
