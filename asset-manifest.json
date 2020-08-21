@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/yxy-demo-react-app/static/css/main.c04e2125.chunk.css",
-    "main.js": "/yxy-demo-react-app/static/js/main.bec6087b.chunk.js",
-    "main.js.map": "/yxy-demo-react-app/static/js/main.bec6087b.chunk.js.map",
+    "main.js": "/yxy-demo-react-app/static/js/main.ec329034.chunk.js",
+    "main.js.map": "/yxy-demo-react-app/static/js/main.ec329034.chunk.js.map",
     "runtime-main.js": "/yxy-demo-react-app/static/js/runtime-main.4c60bad3.js",
     "runtime-main.js.map": "/yxy-demo-react-app/static/js/runtime-main.4c60bad3.js.map",
     "static/js/2.84016699.chunk.js": "/yxy-demo-react-app/static/js/2.84016699.chunk.js",
     "static/js/2.84016699.chunk.js.map": "/yxy-demo-react-app/static/js/2.84016699.chunk.js.map",
     "index.html": "/yxy-demo-react-app/index.html",
-    "precache-manifest.e64a9572f724984a1ca0cafc3f5b1b62.js": "/yxy-demo-react-app/precache-manifest.e64a9572f724984a1ca0cafc3f5b1b62.js",
+    "precache-manifest.41bb23db252a5d6e735e05d4053eab64.js": "/yxy-demo-react-app/precache-manifest.41bb23db252a5d6e735e05d4053eab64.js",
     "service-worker.js": "/yxy-demo-react-app/service-worker.js",
     "static/css/main.c04e2125.chunk.css.map": "/yxy-demo-react-app/static/css/main.c04e2125.chunk.css.map",
     "static/js/2.84016699.chunk.js.LICENSE.txt": "/yxy-demo-react-app/static/js/2.84016699.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.4c60bad3.js",
     "static/js/2.84016699.chunk.js",
     "static/css/main.c04e2125.chunk.css",
-    "static/js/main.bec6087b.chunk.js"
+    "static/js/main.ec329034.chunk.js"
   ]
 }
