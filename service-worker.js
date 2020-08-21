@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/yxy-demo-react-app/precache-manifest.493e8c5130ab81d9b5c7745c0b728198.js"
+  "/yxy-demo-react-app/precache-manifest.c4f3dc05c8e7ed78330c372c5407f804.js"
 );
 
 self.addEventListener('message', (event) => {
