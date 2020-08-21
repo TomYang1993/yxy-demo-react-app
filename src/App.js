@@ -61,7 +61,7 @@ function App() {
                 <LinkContainer to="/signup">
                   <Nav.Link>Signup</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/yxy-demo-react-app/login">
+                <LinkContainer to="/login">
                   <Nav.Link>Login</Nav.Link>
                 </LinkContainer>
               </>
