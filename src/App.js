@@ -44,7 +44,7 @@ function App() {
     !isAuthenticating && <div className="App container">
       <Navbar collapseOnSelect>
         <Navbar.Brand>
-          <Link to="/">Fountain Pen Notes</Link>
+          <Link to={process.env.PUBLIC_URL + '/'}>Fountain Pen Notes</Link>
         </Navbar.Brand>
         <Navbar.Toggle />
 
