@@ -12,7 +12,6 @@ import UnauthenticatedRoute from "./sharedComponents/UnauthenticatedRoute";
 
 export default function Routes() {
     return (
-        <BrowserRouter>
             <Switch>
                 <Route exact path="/">
                     <Home />
@@ -38,6 +37,5 @@ export default function Routes() {
                     <NotFound />
                 </Route>
             </Switch>
-        </BrowserRouter>
     );
 }
