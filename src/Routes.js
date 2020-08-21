@@ -13,7 +13,7 @@ import UnauthenticatedRoute from "./sharedComponents/UnauthenticatedRoute";
 export default function Routes() {
     return (
         <Switch>
-            <Route exact path="/">
+            <Route exact path={process.env.PUBLIC_URL + '/'}>
                 <Home />
             </Route>
             <UnauthenticatedRoute exact path="/login">
