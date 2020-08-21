@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1d9580d5f6876ce9f09ab676fde0c9b8",
+    "revision": "c2f7f4824f0429043881c23b711610bc",
     "url": "/yxy-demo-react-app/index.html"
   },
   {
-    "revision": "5df908e676e56043aa89",
+    "revision": "77e53b7c8d6e328e7327",
     "url": "/yxy-demo-react-app/static/css/main.c04e2125.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/yxy-demo-react-app/static/js/2.84016699.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5df908e676e56043aa89",
-    "url": "/yxy-demo-react-app/static/js/main.1f10ee7c.chunk.js"
+    "revision": "77e53b7c8d6e328e7327",
+    "url": "/yxy-demo-react-app/static/js/main.36c8513f.chunk.js"
   },
   {
     "revision": "90939e75172bc6db3348",
